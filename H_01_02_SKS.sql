@@ -5,13 +5,13 @@ DECLARE
 BEGIN
     v_day := TO_NUMBER(TO_CHAR(v_date, 'DD'));
     IF v_day = TO_NUMBER(TO_CHAR(last_day(trunc(SYSDATE)), 'DD')) THEN
-        dbms_output.put_line('Виплата зарплати');
+        dbms_output.put_line('Г‚ГЁГЇГ«Г ГІГ  Г§Г Г°ГЇГ«Г ГІГЁ');
     ELSIF v_day = 15 THEN
-        dbms_output.Put_line('Виплата авансу');
+        dbms_output.Put_line('Г‚ГЁГЇГ«Г ГІГ  Г ГўГ Г­Г±Гі');
     ELSIF v_day < 15 THEN
-        dbms_output.put_line('Чекаємо на аванс');
+        dbms_output.put_line('Г—ГҐГЄГ ВєГ¬Г® Г­Г  Г ГўГ Г­Г±');
     ELSIF v_day > 15 THEN
-        dbms_output.put_line('Чекаємо на зарплату');
+        dbms_output.put_line('Г—ГҐГЄГ ВєГ¬Г® Г­Г  Г§Г Г°ГЇГ«Г ГІГі');
     END IF;
 END;
 /
